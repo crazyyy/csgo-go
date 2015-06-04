@@ -770,7 +770,22 @@ h3.exchange-link {
     box-shadow: 0 0 50px #fff;
   }
 }
+.single-title {
+  font-size: 45px;
 
+  margin-left: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #f6bb00;
+  span {
+    padding-left: 50px !important;
+    background-repeat: no-repeat !important;
+    background-image: url(../img/attention.png) !important;
+    background-position: left center !important;
+  }
+}
 
 
 
