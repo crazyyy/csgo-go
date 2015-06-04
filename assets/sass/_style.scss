@@ -357,11 +357,9 @@ a {
 
 textarea {
   width: 465px;
-  /* ├Ш├и├░├и├н├а ├п├о├л├┐ ├в ├п├░├о├╢├е├н├▓├а├╡ */
   height: 160px;
   margin: 0 auto;
-  /* ├В├╗├▒├о├▓├а ├п├о├л├┐ ├в ├п├и├к├▒├е├л├а├╡ */
-  /*resize: none; /* ├З├а├п├░├е├╣├а├е├м ├и├з├м├е├н├┐├▓├╝ ├░├а├з├м├е├░ */
+
 }
 
 .comment_add input {
@@ -398,7 +396,6 @@ textarea {
 
 footer {
   font-size: 16px;
-  /*margin: 35px 0 60px;*/
   line-height: 24px;
 
   display: inline-block;
@@ -668,5 +665,5 @@ h3.exchange-link {
   margin: 25px auto;
 
   border-radius: 10px;
-  background: url('http://csgorandom.org/img/item_block_7.png') no-repeat scroll 0 0 #141416;
+  background: url('../img/item_block_7.png') no-repeat scroll 0 0 #141416;
 }
