@@ -95,7 +95,6 @@ a {
   float: right;
 
   padding-top: 17px;
-  /*margin-left: 40px;*/
   li {
     font-size: 18px;
 
@@ -107,20 +106,25 @@ a {
 
     margin-right: 0;
     padding-bottom: 10px;
-  }
-  a {
-    font-family: American_Captain_Cyrillic;
-    font-size: 15pt;
-    font-weight: normal;
+    a {
+      font-family: American_Captain_Cyrillic;
+      font-size: 15pt;
+      font-weight: normal;
 
-    display: block;
+      display: block;
 
-    margin-right: 22px;
+      margin-right: 22px;
 
-    text-decoration: none;
-    text-transform: uppercase;
+      text-decoration: none;
+      text-transform: uppercase;
 
-    color: #f6bb00;
+      color: #f6bb00;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        color: darken(#f6bb00, 20%);
+        border-color: #f6bb00;
+      }
+    }
   }
 }
 
@@ -141,7 +145,8 @@ a {
 
   color: #f6bb00;
   img {
-    margin: 0;
+    max-width: 100%;
+    margin: 0 auto;
   }
   span {
     font-size: 45px;
@@ -296,8 +301,82 @@ a {
       background: url('../img/item_block_9.png') no-repeat;
     }
   }
-}
+  .item.block_11 {
+    float: left;
 
+    width: 300px;
+    height: 300px;
+    margin: 0 30px 30px 0;
+
+    border: 4px solid #f39d00;
+    border-radius: 5px;
+    background: url('../img/item block_11.png') no-repeat;
+  }
+}
+.item_blocks-quadro {
+  width: 762px;
+  margin: 0 auto;
+
+  text-align: center;
+  a {
+    display: inline-block;
+
+    width: 233px;
+    height: 233px;
+    margin: 0 15px 15px 0;
+
+    border: 4px solid #cba708;
+    border-radius: 4px;
+    &:hover {
+      box-shadow: 0 0 30px #fff;
+    }
+    &:nth-child(2) {
+      border-color: #c23836;
+    }
+    &:nth-child(3) {
+      border-color: #982293;
+    }
+    &:nth-child(4) {
+      border-color: #61339a;
+    }
+    &:nth-child(5) {
+      border-color: #cba708;
+    }
+    &:nth-child(6) {
+      border-color: #c23836;
+    }
+    &:nth-child(7) {
+      border-color: #982293;
+    }
+    &:nth-child(8) {
+      border-color: #61339a;
+    }
+    &:nth-child(9) {
+      border-color: #cba708;
+    }
+    &:nth-child(10) {
+      border-color: #c23836;
+    }
+    &:nth-child(11) {
+      border-color: #982293;
+    }
+    &:nth-child(12) {
+      border-color: #61339a;
+    }
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(9),
+    &:nth-child(12) {
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 4px;
+    }
+  }
+}
 .item_blocks_1 {
   display: inline-block;
 
@@ -360,39 +439,8 @@ a {
   }
 }
 
-.item_blocks .item.block_11 {
-  float: left;
 
-  width: 300px;
-  height: 300px;
-  margin: 0 30px 30px 0;
 
-  border: 4px solid #f39d00;
-  border-radius: 5px;
-  background: url('../img/item block_11.png') no-repeat;
-}
-
-.key_block {
-  width: 636px;
-  height: 300px;
-  margin: 0 0 80px 363px;
-
-  border: 4px solid #f39d00;
-  border-radius: 5px;
-  /*border-radius:10px;*/
-  background: #141416 url('../img/item_block_7.png') no-repeat;
-  .item.block_7 {
-    width: 636px;
-    height: 300px;
-  }
-  &:hover {
-    box-shadow: 0 0 30px #fff;
-  }
-  &:active,
-  :focus {
-    box-shadow: 0 0 50px #fff;
-  }
-}
 
 textarea {
   width: 465px;
@@ -463,26 +511,31 @@ footer {
     display: block;
     float: left;
 
-    margin-top: 40px;
+    margin-top: 15px;
     margin-right: 0;
-  }
-  a {
-    font-family: American_Captain_Cyrillic;
-    font-size: 15pt;
-    font-weight: normal;
+    a {
+      font-family: American_Captain_Cyrillic;
+      font-size: 15pt;
+      font-weight: normal;
 
-    display: block;
+      display: block;
 
-    margin-right: 22px;
+      margin-right: 22px;
 
-    text-decoration: none;
-    text-transform: uppercase;
+      text-decoration: none;
+      text-transform: uppercase;
 
-    color: #f6bb00;
+      color: #f6bb00;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        color: darken(#f6bb00, 20%);
+        border-color: #f6bb00;
+      }
+    }
   }
 }
 
-/*--slider--*/
+
 
 div {
   &.wrap {
@@ -696,14 +749,26 @@ h3.exchange-link {
   margin: auto 0;
   padding-top: 5px;
 }
-
 .key_block {
-  width: 435px;
-  height: 205px;
+  display: block;
+
+  width: 636px;
+  height: 300px;
   margin: 25px auto;
 
-  border-radius: 10px;
-  background: url('../img/item_block_7.png') no-repeat scroll 0 0 #141416;
+  border: 4px solid #f39d00;
+  border-radius: 5px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    box-shadow: 0 0 30px #fff;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 50px #fff;
+  }
 }
 
 

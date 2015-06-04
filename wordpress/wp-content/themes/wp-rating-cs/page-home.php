@@ -1,28 +1,31 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
-    <div class="item_blocks">
-        <a class="item block_1" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892141"></a>
-        <a class="item block_2" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892157"></a>
-        <a class="item block_3" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892160"></a>
-        <a class="item block_4" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892164"></a>
-        <a class="item block_5" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892166"></a>
-        <a class="item block_6" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1892169"></a>
-        <a class="item block_8" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1895000"></a>
-        <a class="item block_9" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1895003"></a>
+  <div class="item_blocks-quadro">
+    <?php
+      if( have_rows('quard') ):
+        while ( have_rows('quard') ) : the_row();
+    ?>
+        <a href="<?php the_sub_field('links'); ?>">
+          <img src="<?php the_sub_field('img'); ?>" alt="">
+        </a>
+    <?php endwhile;
+      else :
+          // no rows found
+      endif; ?>
         <div class="clr"></div>
-    </div>
+    </div><!-- item_blocks-quadro -->
 
     <div class="item_blockss">
-      <a class="item block_7" href="https://www.oplata.info/asp2/pay_wm.asp?id_d=1934204">
-        <div class="key_block"></div>
+      <a class="key_block" href="<?php the_field('link-big'); ?>">
+        <img src="<?php the_field('img-big'); ?>" alt="">
       </a>
-    </div>
+    </div><!-- item_blockss -->
 
     <section class="container">
         <div class="attention">
             <?php the_content(); ?>
         </div><!-- attention -->
-    </section>
+    </section><!-- container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
