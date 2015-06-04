@@ -22,8 +22,7 @@
     	<link rel="stylesheet" href="css/ie.css">
     <![endif]-->
 
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
+
 </head>
 
 <body>
@@ -93,9 +92,6 @@
                         </p>
                     </div>
                 </center>
-
-                <br>
-                <br>
                 <div class="attention">
                     <img src="img/attention.png" alt="Нам доверяют!">
                     <span>Нам доверяют!</span>
@@ -136,29 +132,9 @@
         </footer>
     </div>
 
-    <script>
-        function buy(title, id) {
-            $("#buy .title").html(title);
-            $("#type").val(id);
-            $('#buy').arcticmodal();
-        }
-    </script>
-    <div style="display: none;">
-        <div class="box-modal" id="buy">
-            <div class="box-modal_close arcticmodal-close">закрыть</div>
-            <div class="title"></div>
-            <br>
-            <i>Здесь вам нужно ввести Вашу ссылку на обмен. Если Вы не знаете где ее взять, нажмите на "Как купить".</i>
-            <br>
-            <div id="error2"></div>
-            <br>
-            <form action="http://csgo-go.org/prepay.php" id="myForm2" name="myForm2" method="post">
-                <input class="link" name="link" id="number" style="margin-top: 12px;" placeholder="Здесь укажите Вашу ссылку на обмен!" type="text">
-                <input name="type" id="type" value="0" type="hidden">
-                <input class="submit" value="ПЕРЕЙТИ К ОПЛАТЕ" type="submit">
-            </form>
-        </div>
-    </div>
-</body>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery.arcticmodal-0.3.min.js"></script>
 
+</body>
 </html>
