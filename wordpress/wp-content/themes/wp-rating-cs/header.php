@@ -14,26 +14,22 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!-- wrapper -->
-<div class="wrapper clearfix">
-    <!-- header -->
-    <header class="header inner clearfix" role="banner">
-        <!-- logo -->
+
+    <div class="wrapper">
         <div class="logo">
             <?php if ( is_front_page() && is_home() ){ } else { ?>
                 <a href="<?php echo home_url(); ?>">
             <?php  } ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logos.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
             <?php if ( is_front_page() && is_home() ){
             } else { ?>
                 </a>
             <?php } ?>
         </div>
         <!-- /logo -->
-        <!-- nav -->
-        <nav class="nav" role="navigation">
+
+        <div class="container_top">
             <?php wpeHeadNav(); ?>
-        </nav>
-        <!-- /nav -->
-    </header>
-    <!-- /header -->
+        </div>
+
+        <section class="container">

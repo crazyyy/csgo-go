@@ -2,8 +2,6 @@
 @import '_comments.scss';
 @import '_sprite.scss';
 @import '_mixin.scss';
-@import '_style.scss';
-@import '_fonts.scss';
 @import '_jquery.arcticmodal-0.3.scss';
 
 @font-face {
@@ -57,18 +55,15 @@ a {
 }
 
 .logo {
+  display: block;
   float: left;
 
-  padding-top: 5px;
-  a {
-    display: block;
-
-    width: 325px;
-    height: 63px;
-    margin-top: 4px;
-    margin-left: 15px;
-
-    background: url('../img/logos.png') 0 0 no-repeat;
+  width: 325px;
+  height: 63px;
+  margin-top: 4px;
+  margin-left: 15px;
+  img {
+    width: 100%;
   }
 }
 
@@ -145,8 +140,30 @@ a {
   text-transform: uppercase;
 
   color: #f6bb00;
-}
+  img {
+    margin: 0;
+  }
+  span {
+    font-size: 45px;
 
+    margin-left: 30px;
+
+    text-transform: uppercase;
+
+    color: #f6bb00;
+  }
+  p {
+    font-family: Roboto-Light;
+    font-family: counter_strike;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    color: #f6bb00;
+  }
+}
 .random {
   position: relative;
 
@@ -171,30 +188,7 @@ a {
   }
 }
 
-.attention {
-  img {
-    margin: 0;
-  }
-  span {
-    font-size: 45px;
 
-    margin-left: 30px;
-
-    text-transform: uppercase;
-
-    color: #f6bb00;
-  }
-  p {
-    font-family: Roboto-Light;
-    font-family: counter_strike;
-    font-size: 21px;
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    color: #f6bb00;
-  }
-}
 
 .item_blocks {
   margin: 0 25px;
@@ -404,7 +398,6 @@ textarea {
   width: 465px;
   height: 160px;
   margin: 0 auto;
-
 }
 
 .comment_add input {

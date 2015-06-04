@@ -1,26 +1,24 @@
-</div>
-<!-- /wrapper -->
+        </section>
+        <footer>
 
-<!-- footer -->
-<footer class="footer" role="contentinfo">
+        <div class="logo">
+            <?php if ( is_front_page() && is_home() ){ } else { ?>
+                <a href="<?php echo home_url(); ?>">
+            <?php  } ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logos.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+            <?php if ( is_front_page() && is_home() ){
+            } else { ?>
+                </a>
+            <?php } ?>
+        </div>
+        <!-- /logo -->
 
-	<div class="mainfooter">
+        <?php wpeFootNav(); ?>
+        </footer>
+    </div>
+    <?php wp_footer(); ?>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 
-		<!-- copyright -->
-		<p class="copyright">
-			&copy; <?php echo date("Y"); ?> Собственность <?php bloginfo('name'); ?>. <?php _e('Powered by', 'wpeasy'); ?>
-			<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//saitobaza.ru" title="WP Easy - быстрая тема для WordPress">WP Easy</a>.
-		</p>
-		<!-- /copyright -->
-
-	</div>
-	<!-- /.mainfooter -->
-
-</footer>
-<!-- /footer -->
-
-<div class="backhead bkblock0n">
-</div><!-- backhead bkblock0n -->
-	<?php wp_footer(); ?>
 </body>
 </html>
