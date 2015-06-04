@@ -162,53 +162,8 @@ gulp.task('styles', function () {
     .pipe(plugins.size({title: 'styles'}));
 });
 
-gulp.task('clearcache', function () {
-  return gulp.src(basePaths.cache, {read: false})
-    .pipe(plugins.wait(500))
-    .pipe(plugins.rimraf());
-});
-gulp.task('clearPluginCache', function (done) {
-  return plugins.cache.clearAll(done);
-});
 
-gulp.task('default', ['clearPluginCache', 'scripts', 'styles', 'fonts'], function () {
-  if (htmlOWp === true) {
-    browserSync({
-      notify: false,
-      port: 9000,
-      server: {
-        baseDir: basePaths.dest,
-      }
-    });
-  } else {
-    browserSync({
-      notify: false,
-      proxy: wpDomain,
-      host: wpDomain,
-      port: 8080
-    });
-  }
-
-  // watch for changes
-  gulp.watch([
-    basePaths.dest + '*.html',
-    basePaths.dest + '*.php',
-    appFiles.scripts,
-    paths.images.src,
-    paths.fonts.src
-  ]).on('change', reload);
-
-  // gulp.watch(paths.images.src, ['image', reload]);
-  gulp.watch(paths.images.src, ['imagecp', reload]);
-  gulp.watch(appFiles.styles, ['styles', reload]);
-  gulp.watch(paths.sprite.src, ['styles', reload]);
-  gulp.watch(paths.fonts.src, ['fonts', reload]);
-  gulp.watch(appFiles.scripts, ['jshint']);
-  gulp.watch(appFiles.scripts, ['scripts', reload]);
-
-});
-
-gulp.task('serve', ['clearPluginCache', 'sprite', 'image', 'webp', 'scripts', 'styles', 'fonts'], function () {
+gulp.task('serve', ['sprite', 'image', 'scripts', 'styles', 'fonts'], function () {
   if (htmlOWp === true) {
     browserSync({
       notify: false,
@@ -234,12 +189,11 @@ gulp.task('serve', ['clearPluginCache', 'sprite', 'image', 'webp', 'scripts', 's
     paths.fonts.src
   ]).on('change', reload);
 
-  gulp.watch(paths.sprite.src, ['sprite', 'image', 'webp', 'styles', reload]);
-  gulp.watch(paths.images.src, ['image', 'webp', reload]);
+  gulp.watch(paths.sprite.src, ['sprite', 'image', 'styles', reload]);
+  gulp.watch(paths.images.src, ['image', reload]);
   gulp.watch(appFiles.styles, ['styles', reload]);
   gulp.watch(paths.sprite.src, ['styles', reload]);
   gulp.watch(paths.fonts.src, ['fonts', reload]);
-  gulp.watch(appFiles.scripts, ['jshint']);
   gulp.watch(appFiles.scripts, ['scripts', reload]);
 
 });

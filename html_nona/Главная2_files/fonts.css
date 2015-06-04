@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'American_Captain_Cyrillic';
+    src: url('American_Captain_Cyrillic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'counter_strike';
+    src: url('counter_strike.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
